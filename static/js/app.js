@@ -1,4 +1,19 @@
 var tableData = data;
+var tbody = d3.select('#ufo-table>tbody');
+
+Object.values(tableData).forEach((item) => {
+    var tr = tbody.append('tr');
+    tr.append('td').text(item.datetime);
+    tr.append('td').text(item.city);
+    tr.append('td').text(item.state);
+    tr.append('td').text(item.country);
+    tr.append('td').text(item.shape);
+    tr.append('td').text(item.durationMinutes);
+    tr.append('td').text(item.comments);
+});
+
+
+
 
 var button = d3.select("#filter-btn");
 
